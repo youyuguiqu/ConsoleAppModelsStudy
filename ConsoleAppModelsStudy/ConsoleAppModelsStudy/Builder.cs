@@ -8,6 +8,7 @@ namespace ConsoleAppModelsStudy
 {
     public class Builder
     {
+        //构建器，利用构建器作为参数来构建Student对象
         public String name;
         public int number = -1;
         public String sex;
@@ -55,7 +56,6 @@ namespace ConsoleAppModelsStudy
          int age = -1;
          String school;
 
-
          public Student(Builder builder)
         {
 
@@ -66,6 +66,6 @@ namespace ConsoleAppModelsStudy
             this.sex = builder.sex;
         }
     }
-    //构建器，利用构建器作为参数来构建Student对象
+   
    
 }
