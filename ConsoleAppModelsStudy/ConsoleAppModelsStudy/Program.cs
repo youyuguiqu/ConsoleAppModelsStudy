@@ -13,7 +13,7 @@ namespace ConsoleAppModelsStudy
             //简单工厂模式
             while (true)
             {
-                Console.WriteLine("请输入你的选项：sms 或者 mail");
+                Console.WriteLine("请输入你的选项：sms、wx 或者 mail");
                 string s = Console.ReadLine();
                 if ("exit".Equals(s) || "quit".Equals(s))
                 {
