@@ -10,10 +10,10 @@ namespace ConsoleAppModelsStudy
     {
         static void Main(string[] args)
         {
-            //简单工厂模式
+            //抽象工厂模式
             while (true)
             {
-                Console.WriteLine("请输入你的选项：sms、wx 或者 mail");
+                Console.WriteLine("请输入以下选项：wx、sms、mail");
                 string s = Console.ReadLine();
                 if ("exit".Equals(s) || "quit".Equals(s))
                 {
@@ -21,7 +21,21 @@ namespace ConsoleAppModelsStudy
                 }
                 else
                 {
-                    Common.SingleFactoryUtil(s);
+                    switch (s)
+                    {
+                        case "sms":
+                            Common.SendMessage(new SMSFactoryClass());
+                            break;
+                        case "mail":
+                            Common.SendMessage(new MailfactoryClass());
+                            break;
+                        case "wx":
+                            Common.SendMessage(new WXFactoryClass());
+                            break;
+                        default:
+                            Console.WriteLine("无该选项，请你重新选择。");
+                            break;
+                    }
                 }
             }
         }
