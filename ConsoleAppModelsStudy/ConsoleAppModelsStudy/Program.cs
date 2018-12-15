@@ -11,9 +11,9 @@ namespace ConsoleAppModelsStudy
         static void Main(string[] args)
         {
             //建造者模式
-            Builder sb = new Builder();
-            sb.setAge(12).setName("xiaoming").setNumber(80).setSchool("youmayizhong").setSex("man");
-            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(sb));
+            Student student = new Builder().setAge(18).setName("小明").setSchool("牛头山学校").build();
+            string name = student.name;
+            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(student));
             Console.ReadLine();
             
         }

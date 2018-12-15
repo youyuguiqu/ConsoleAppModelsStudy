@@ -50,13 +50,13 @@ namespace ConsoleAppModelsStudy
     }
     public class Student
     {
-         String name;
-         int number = -1;
-         String sex;
-         int age = -1;
-         String school;
+        public String name { get; }
+        public int number { get;  }
+        public String sex { get;  }
+        public int age { get;  }
+        public String school { get;  }
 
-         public Student(Builder builder)
+        public Student(Builder builder)
         {
 
             this.age = builder.age;
