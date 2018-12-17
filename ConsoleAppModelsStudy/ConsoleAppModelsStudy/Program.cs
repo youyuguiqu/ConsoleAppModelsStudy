@@ -10,16 +10,12 @@ namespace ConsoleAppModelsStudy
     {
         static void Main(string[] args)
         {
-            //模板模式
-            //加法
-            AbstractCalculateClass calculate = new Plus();
-            int result= calculate.OperCalculater(5,8);
-            Console.WriteLine("加法的结果是：{0}",result);
-
-            //减法
-            AbstractCalculateClass subtraction = new Subtraction();
-            result = calculate.OperCalculater(5, 8);
-            Console.WriteLine("减法的结果是：{0}", result);
+            IObserver one = new ObserverOne();
+            IObserver two = new ObserverTwo();
+            MySubject subject = new MySubject();
+            subject.Add(one);
+            subject.Add(two);
+            subject.Operation();
             Console.ReadLine();
             
         }
