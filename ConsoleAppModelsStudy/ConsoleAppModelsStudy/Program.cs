@@ -10,10 +10,16 @@ namespace ConsoleAppModelsStudy
     {
         static void Main(string[] args)
         {
-            //建造者模式
-            Student student = new Builder().setAge(18).setName("小明").setSchool("牛头山学校").build();
-            string name = student.name;
-            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(student));
+            //模板模式
+            //加法
+            AbstractCalculateClass calculate = new Plus();
+            int result= calculate.OperCalculater(5,8);
+            Console.WriteLine("加法的结果是：{0}",result);
+
+            //减法
+            AbstractCalculateClass subtraction = new Subtraction();
+            result = calculate.OperCalculater(5, 8);
+            Console.WriteLine("减法的结果是：{0}", result);
             Console.ReadLine();
             
         }
