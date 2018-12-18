@@ -10,12 +10,9 @@ namespace ConsoleAppModelsStudy
     {
         static void Main(string[] args)
         {
-            IObserver one = new ObserverOne();
-            IObserver two = new ObserverTwo();
-            MySubject subject = new MySubject();
-            subject.Add(one);
-            subject.Add(two);
-            subject.Operation();
+
+            ITarget target = new AdapterClass();
+            target.Request();
             Console.ReadLine();
             
         }
